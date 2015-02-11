@@ -1,0 +1,10 @@
+require 'theharvester'
+
+case ARGV[0]
+  when 'up'
+    puts "bring up the harvester on port: #{ARGV[1]}"
+    Theharvester.listen_on_port(ARGV[1])
+  when "help"
+  else
+    puts "No command #{ARGV[0]}"
+end
